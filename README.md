@@ -152,4 +152,4 @@ you need to re-tune for a different tag or a thicker surface.
 | `player.env.example` | Settings (copy to `player.env`) |
 | `tapdeck.service` | systemd unit |
 
-Built with help from Claude.
+MIT licensed - see [LICENSE](LICENSE). Built with help from Claude.
