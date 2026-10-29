@@ -1,0 +1,6 @@
+PyChromecast>=14
+zeroconf
+mutagen
+adafruit-circuitpython-pn532
+adafruit-blinka
+gpiod>=2.2.2,<3

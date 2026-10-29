@@ -1,0 +1,23 @@
+[Unit]
+Description=tapdeck - tap an NFC tag to cast an album
+Wants=network-online.target
+After=network-online.target systemd-modules-load.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/tapdeck
+EnvironmentFile=-/home/pi/tapdeck/player.env
+ExecStart=/home/pi/tapdeck/venv/bin/python -u /home/pi/tapdeck/nfc_player.py
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/pi/tapdeck
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

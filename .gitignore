@@ -1,0 +1,7 @@
+player.env
+*.log
+*.log.*
+__pycache__/
+*.pyc
+venv/
+music/

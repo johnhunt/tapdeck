@@ -1,0 +1,13 @@
+# Append to /etc/samba/smb.conf (and set "map to guest = bad user" in [global]).
+# Guest access, no password - fine on a trusted home LAN, not anywhere else.
+[music]
+   comment = tapdeck albums
+   path = /home/pi/music
+   browseable = yes
+   read only = no
+   guest ok = yes
+   guest only = yes
+   force user = pi
+   force group = pi
+   create mask = 0664
+   directory mask = 0775
